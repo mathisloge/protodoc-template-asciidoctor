@@ -1,0 +1,18 @@
+{% extends "field.adoc" %}
+{% block type %}{^ super() ^}{% endblock %}
+{% block length %}{^ super() ^}{% endblock %}
+{% block description %}
+{^ super() ^}
+{% if existsIn(field, "range") %} 
+    {% if length(field.range) > 0 %} 
+Range: 
+
+## for range in field.range 
+* {^ range.min ^} - {^ range.max ^} 
+## endfor 
+    {% endif %} 
+{% endif %}
+{% endblock %}
+{% block units %}{^ super() ^}{% endblock %}
+{% block minVersion %}{^ super() ^}{% endblock %}
+{% block deprecatedSince %}{^ super() ^}{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "field.adoc" %}
+{% block type %}{^ super() ^}{% endblock %}
+{% block length %}{^ field.minLength ^} or {^ field.maxLength ^}{% endblock %}
+{% block description %}
+{^ super() ^}
+Condition: {^ default(field.condition, "none") ^}
+{% endblock %}
+
+{% block minVersion %}{^ super() ^}{% endblock %}
+{% block deprecatedSince %}{^ super() ^}{% endblock %}

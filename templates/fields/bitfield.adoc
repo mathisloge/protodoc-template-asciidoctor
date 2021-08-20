@@ -1,0 +1,6 @@
+{% extends "field.adoc" %}
+{% block type %}{^ super() ^}{% endblock %}
+{% block length %}{^ super() ^}{% endblock %}
+{% block description %}{^ super() ^}{% endblock %}
+{% block minVersion %}{^ super() ^}{% endblock %}
+{% block deprecatedSince %}{^ super() ^}{% endblock %}

@@ -1,0 +1,19 @@
+{
+    "templates": {
+        "root": "templates",
+        "platforms": "platforms.adoc",
+        "namespaces": "namespaces.adoc",
+        "namespace": "namespaces.adoc"
+    },
+    "lang": "lang_en.json",
+    "output": "generated",
+    "trim": true,
+    "split": true,
+    "jsonOutput": true,
+    "files": [
+        "../protos/myschema1.xml",
+        "../protos/myschema2.xml",
+        "../protos/myschema3.xml",
+        "../protos/myschema4.xml"
+    ]
+}

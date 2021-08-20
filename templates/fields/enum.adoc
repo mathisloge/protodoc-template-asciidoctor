@@ -1,0 +1,20 @@
+{% extends "field.adoc" %}
+{% block type %}{^ super() ^}{% endblock %}
+{% block length %}{^ super() ^}{% endblock %}
+
+{% block description %}
+{^ super() ^}
+{% if existsIn(field, "enum") %}
+
+{% set sortedEnum = sortEnum(field.enum, "value") %}
+## for enumName in sortedEnum
+{% set enum = at(field.enum, enumName) %}
+* {^ default(enum.displayName, enum.name) ^}: {^ enum.value ^}
+## endfor
+{% endif %}
+{% endblock %}
+
+{% block units %}{^ super() ^}{% endblock %}
+{% block scaling %}{^ super() ^}{% endblock %}
+{% block minVersion %}{^ super() ^}{% endblock %}
+{% block deprecatedSince %}{^ super() ^}{% endblock %}
