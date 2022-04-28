@@ -13,10 +13,13 @@
 |Scaling
 |since version
 |deprecated since
-
-{% for fkey, field in message.fields %}
+{% if existsIn(message, "fields") %}
+{% set sortedFields = inOrder(message.fields) %}
+## for fieldKey in sortedFields
+{% set field = at(message.fields, fieldKey) %}
 {% include "field.adoc" %} 
-{% endfor %}
+## endfor
+{% endif %}
 
 |===
 {% endfor  %}
